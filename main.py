@@ -1,19 +1,19 @@
-# Check if two words are anagrams 
-# Example:
-# find_anagrams("hello", "check") --> False
-# find_anagrams("below", "elbow") --> True
+#Finding Anagrams in two words or sentences
 
+def finding_anagram(word, anagram) :
 
-def find_anagram(word, anagram):
-    # [assignment] Add your code here
-    if (sorted(word) == sorted(anagram)):
-        print(sorted(word), sorted(anagram))
-        return True
+    #converting the inputs to lowercase letters
 
-    return False
+    word = word.lower()
+    anagram = anagram.lower()
 
-print(find_anagram('below','elbow'))
-print(find_anagram("hello","check"))
-print(find_anagram("schoolmaster","classroom"))
-print(find_anagram("punishments","nine thumps"))
-print(find_anagram("debit card","bad credit"))
+    #Removing the whitespaces
+
+    word = word.replace(" ","")
+    anagram = anagram.replace(" ","")
+
+    #Sorting out the contents of the containers
+
+    return (print("Calling find_anagram with",word + " & "+anagram)), print(sorted(word) == sorted(anagram))
+
+finding_anagram(str(input("Enter First Word : ")),str(input("Enter Second Word : ")))
